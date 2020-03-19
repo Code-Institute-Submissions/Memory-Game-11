@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  }
+
+body {
+  margin: 0;
+  background: radial-gradient(rgb(241, 227, 26), rgb(146, 97, 6));
+}
+
+.page-title {
+  color: #f88306;
+  font-family: 'Rock Salt', cursive;
+  font-weight: normal;
+  text-align: center;
+  font-size: 2em;
+}
+
+.game-info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-info {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(228, 154, 17);
+  font-size: 2em;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px;
+}
+
