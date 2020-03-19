@@ -1,3 +1,5 @@
+/* Global Styles */
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +10,28 @@ html {
 
 body {
   margin: 0;
-  background: radial-gradient(rgb(241, 227, 26), rgb(146, 97, 6));
+  background: radial-gradient(#f1e31a, #926106);
+}
+
+/* Header */
+
+.bg-custom {
+    background-color: #000000;
+}
+
+.navbar-brand img {
+    width: 75px;
+    height: 75px;
+    padding: 5px;
+}
+
+.navbar ul li a {
+    font-size: 1.5rem;
+}
+
+.fa-tools {
+    color: #e28800;
+    padding: 0 5px;
 }
 
 .page-title {
@@ -27,7 +50,7 @@ body {
 
 .game-info {
   font-family: 'Raleway', sans-serif;
-  color: rgb(228, 154, 17);
+  color: #e28800;
   font-size: 2em;
 }
 
@@ -38,5 +61,84 @@ body {
   margin: 50px;
   justify-content: center;
   perspective: 500px;
+}
+
+/* Game board */
+
+.card {
+  position: relative;
+  height: 175px;
+  width: 125px;
+}
+
+.card-back {
+  background-color: black;
+  border-color: #ff4800;
+}
+
+.card-back {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.card-corner-top-left {
+  transform: rotate(270deg);
+  top: 0;
+  left: 0;
+}
+
+.card-corner-top-right {
+  top: 0;
+  right: 0;
+}
+
+.card-corner-bottom-left {
+  transform: rotate(180deg);
+  bottom: 0;
+  left: 0;
+}
+
+.card-corner-bottom-right {
+  transform: rotate(90deg);
+  bottom: 0;
+  right: 0;
+}
+
+.back-face {
+  align-self: flex-start;
+  transform: translateY(-10px);
+  transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover .back-face {
+  transform: translateY(0)
+}
+
+/* Overlay text */
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #5eff00;
+  font-family: 'Raleway', sans-serif;
+}
+
+.overlay-text-small {
+  font-size: .3em;
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
 }
 
