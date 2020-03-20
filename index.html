@@ -11,10 +11,10 @@
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/cb5978f41d.js" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
 	<link rel="stylesheet" href="assets/css/style.css">
 
 	<title>Memory Game</title>
@@ -22,46 +22,44 @@
 
 <body>
     <header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
-	<!-- Logo -->
-	<a class="navbar-brand" aria-label="Brand Logo & Link to refresh" href="index.html">
-		<div class = "container"><img src="assets/img/cards.png" alt="logo" title="Match and Flip Logo"></div>
-    </a>
-    	<h1 class="page-title m-0">Match and Flip</h1>
-
-	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-		<!-- Navigation links -->
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav ml-auto uppercase">
-				<li class="nav-item">
-					<a class="nav-link" aria-label="Open Settings Menu" href="#"
-						id="menu">Menu <i class="fas fa-tools"></i></a>
-				</li>
-			</ul>
-		</div>
-</nav>
-	<div class="overlay-text visible">
-		Click to Start
-	</div>
-	<div id="game-over-text" class="overlay-text">
-		GAME OVER
-		<span class="overlay-text-small">Click to Restart</span>
-	</div>
-	<div id="victory-text" class="overlay-text">
-		VICTORY
-		<span class="overlay-text-small">Click to Restart</span>
-	</div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+            <!-- Logo -->
+            <a class="navbar-brand" aria-label="Brand Logo & Link to refresh" href="index.html">
+                <div><img src="assets/img/cards.png" alt="logo" title="Match and Flip Logo"></div>
+            </a>
+                <h1 class="page-title m-0">Match and Flip</h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation links -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-label="Open Settings Menu" href="#"
+                                id="menu">Menu <i class="fas fa-tools"></i></a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+<!-- 
+        <div class="overlay-text visible">
+            Click to Start
+        </div>
+        <div id="game-over-text" class="overlay-text">
+            GAME OVER
+            <span class="overlay-text-small">Click to Restart</span>
+        </div>
+        <div id="victory-text" class="overlay-text">
+            VICTORY
+            <span class="overlay-text-small">Click to Restart</span>
+        </div>
+ -->
 
 	<div class="game-container">
 		<div class="game-info-container">
 			<div class="game-info"><i class="far fa-clock"></i>
 				Time <span id="time-remaining">99</span>
 			</div>
-
-            <br/>
-
 			<div class="game-info">
 				Flips <span id="flips">0</span>
 			</div>
@@ -72,182 +70,168 @@
 				<span id="audio"></span>
 			</div>
 		</div>
+    </div>
 
     </header>
 
-		<div class="card">
-			<div class="card-back card-face">1
-				<img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-				<img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-				<img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-				<img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-				<img class="back-face" src="">
+    <section class="memory-game">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
         
-        <div class="card">
-            <div class="card-back card-face">2
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">3
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">4
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">5
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">6
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">7
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">8
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">9
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">10
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">11
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">12
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">13
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">14
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">15
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-back card-face">16
-                <img class="card-corner card-corner-top-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-top-right" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-left" src="assets/img/card-corner.png">
-                <img class="card-corner card-corner-bottom-right" src="assets/img/card-corner.png">
-                <img class="back-face" src="">
+        <div class="memory-card">
+            <div class="card-back card-face">
+                <img class="back-face" src="assets/img/back-face-card.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="front-face" src="">
             </div>
         </div>
+    </section>
 
-
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-        <!-- Custom javascript file -->
-        <script src="assets/js/script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- Custom javascript file -->
+    <script src="assets/js/script.js"></script>
 
 </body>
 
