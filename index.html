@@ -22,27 +22,30 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
-            <!-- Logo -->
-            <a class="navbar-brand" aria-label="Brand Logo & Link to refresh" href="index.html">
-                <div><img src="assets/img/cards.png" alt="logo" title="Match and Flip Logo"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+            <a class="navbar-brand aria-label="Brand Logo & Link to refresh" href="index.html">
+            <img src="assets/img/cards.png" alt="logo" title="Flip and Match Logo">
             </a>
-                <h1 class="page-title m-0">Match and Flip</h1>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Navigation links -->
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-label="Open Settings Menu" href="#"
-                                id="menu">Menu <i class="fas fa-tools"></i></a>
-                        </li>
-                    </ul>
-                </div>
+            <span class="navbar-text">Flip and Match</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Theme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Difficulty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Audio</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-<!-- 
-        <div class="overlay-text visible">
+
+        <!-- <div class="overlay-text visible">
             Click to Start
         </div>
         <div id="game-over-text" class="overlay-text">
@@ -52,29 +55,30 @@
         <div id="victory-text" class="overlay-text">
             VICTORY
             <span class="overlay-text-small">Click to Restart</span>
-        </div>
- -->
-
-	<div class="game-container">
-		<div class="game-info-container">
-			<div class="game-info"><i class="far fa-clock"></i>
-				Time <span id="time-remaining">99</span>
-			</div>
-			<div class="game-info">
-				Flips <span id="flips">0</span>
-			</div>
-            <div class="game-info">Pause <i class="far fa-pause-circle"></i>
-				<span id="pause"></span>
-			</div>
-            <div class="game-info">Volume <i class="fas fa-volume-up"></i>
-				<span id="audio"></span>
-			</div>
-		</div>
-    </div>
-
+        </div> -->
     </header>
+ 
+    <section>
+          <div class="game-container">
+            <h3>Find the pairs and win</h3>
+            <div class="game-info-container">
+                <div class="game-info"><i class="far fa-clock"></i>
+                    Time <span id="time-remaining">99</span>
+                </div>
+                <div class="game-info">
+                    Flips <span id="flips">0</span>
+                </div>
+                <div class="game-info"><i class="far fa-pause-circle"></i>
+                    <span id="pause"></span>
+                </div>
+                <div class="game-info"><i class="fas fa-volume-up"></i>
+                    <span id="audio"></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="memory-game">
+<!-- <section class="memory-game container-fluid">
         <div class="memory-card">
             <div class="card-back card-face">
                 <img class="back-face" src="assets/img/back-face-card.png">
@@ -218,7 +222,7 @@
                 <img class="front-face" src="">
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
