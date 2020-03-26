@@ -23,211 +23,50 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-            <a class="navbar-brand" aria-label="Brand Logo & Link to refresh" href="index.html">
-            <img src="assets/img/cards.png" alt="logo" title="Flip and Match Logo">
+            <a class="navbar-brand" aria-label=" Brand Logo & Link to refresh " href="index.html ">
+                <img src="assets/img/cards.png " alt="logo " title="Flip and Match Logo ">
             </a>
-            <span class="navbar-text text-sm-left flex-md-nowrap">Flip and Match</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-text text-nowrap">Flip and Match</span>
+            <button class="navbar-toggler " type="button " data-toggle="collapse" data-target="#navbarNavDropdown " aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Theme</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a class="nav-link" href="#">Difficulty</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a class="nav-link" href="#">Audio</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
- <div class="game-container">
-    <div class="game-info-container">
-      <div class="game-info">
-        Time <span id="time-remaining">100</span>
-      </div>
-      <div class="game-info">
-        Flips <span id="flips">0</span>
-      </div>
-    </div>
-    <!-- <section>
+
+    <div class="wrapper">
         <h3>Find the pairs and win</h3>
-        <div class="game-container d-block">
-            <div class="row justify-content-md-around">
-                <div class="game-info col-6 col-md-auto"><i class="far fa-clock "></i> Time <span id="time-remaining ">99</span>
-                </div>
-                <div class="game-info col-6 col-md-auto"><i class="fas fa-dice"></i> Flips <span id="flips ">0</span>
-                </div>
-                <div class="game-info col-3 col-md-1 justify-content-end"><i class="fas fa-volume-up "></i>
-                    <span id="audio "></span>
-                </div>
-            </div>
+        <button type="button" class="btn btn-danger btn-lg">Start</button>
+    </div>
+    <div class="row justify-content-md-around">
+        <div class="game-info col-5 col-md-auto"><i class="far fa-clock"></i> Time: <span class="time-remaining">99</span>
         </div>
-    </section> -->
-
-    <div class="memory-game">
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
+        <div class="game-info col-5 col-md-auto"><i class="fas fa-dice"></i> Flips: <span class="score">0</span>
         </div>
-        
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
-        </div>
-
-        <div class="memory-card">
-            <div class="card-back card-face">
-                <img class="back-face" src="assets/img/back-face-card.png">
-            </div>
-            <div class="card-front card-face">
-                <img class="front-face" src="">
-            </div>
+        <div class="game-info col-2 col-md-1"><i class="fas fa-volume-up"></i>
+            <span id="audio"></span>
         </div>
     </div>
- </div>
+    <div class="game container"></div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
     <!-- Custom javascript file -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js "></script>
 
 </body>
 
