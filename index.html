@@ -23,10 +23,10 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-            <a class="navbar-brand aria-label="Brand Logo & Link to refresh" href="index.html">
+            <a class="navbar-brand" aria-label="Brand Logo & Link to refresh" href="index.html">
             <img src="assets/img/cards.png" alt="logo" title="Flip and Match Logo">
             </a>
-            <span class="navbar-text">Flip and Match</span>
+            <span class="navbar-text text-sm-left flex-md-nowrap">Flip and Match</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,41 +44,32 @@
                 </ul>
             </div>
         </nav>
-
-        <!-- <div class="overlay-text visible">
-            Click to Start
-        </div>
-        <div id="game-over-text" class="overlay-text">
-            GAME OVER
-            <span class="overlay-text-small">Click to Restart</span>
-        </div>
-        <div id="victory-text" class="overlay-text">
-            VICTORY
-            <span class="overlay-text-small">Click to Restart</span>
-        </div> -->
     </header>
- 
-    <section>
-          <div class="game-container">
-            <h3>Find the pairs and win</h3>
-            <div class="game-info-container">
-                <div class="game-info"><i class="far fa-clock"></i>
-                    Time <span id="time-remaining">99</span>
+ <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Time <span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        Flips <span id="flips">0</span>
+      </div>
+    </div>
+    <!-- <section>
+        <h3>Find the pairs and win</h3>
+        <div class="game-container d-block">
+            <div class="row justify-content-md-around">
+                <div class="game-info col-6 col-md-auto"><i class="far fa-clock "></i> Time <span id="time-remaining ">99</span>
                 </div>
-                <div class="game-info">
-                    Flips <span id="flips">0</span>
+                <div class="game-info col-6 col-md-auto"><i class="fas fa-dice"></i> Flips <span id="flips ">0</span>
                 </div>
-                <div class="game-info"><i class="far fa-pause-circle"></i>
-                    <span id="pause"></span>
-                </div>
-                <div class="game-info"><i class="fas fa-volume-up"></i>
-                    <span id="audio"></span>
+                <div class="game-info col-3 col-md-1 justify-content-end"><i class="fas fa-volume-up "></i>
+                    <span id="audio "></span>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-<!-- <section class="memory-game container-fluid">
+    <div class="memory-game">
         <div class="memory-card">
             <div class="card-back card-face">
                 <img class="back-face" src="assets/img/back-face-card.png">
@@ -222,7 +213,8 @@
                 <img class="front-face" src="">
             </div>
         </div>
-    </section> -->
+    </div>
+ </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
