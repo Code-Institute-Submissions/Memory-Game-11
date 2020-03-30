@@ -1,4 +1,4 @@
-/* Global Styles */
+                /* Global Styles */
                 
                 * {
                     padding: 0;
@@ -15,7 +15,11 @@
                 
                 body {
                     font-family: 'Raleway', sans-serif;
-                    background: radial-gradient(#f1e31a, #926106);
+                    background-image: url("https://i.imgur.com/41Q3v0A.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
                 }
                 /* Header */
                 
@@ -23,36 +27,25 @@
                     background-color: #000000;
                 }
                 
-                .navbar-brand img {
+                .logo {
                     width: 50px;
                     height: 50px;
                     padding: 5px;
                 }
                 
-                .navbar-text {
-                    color: #f88306 !important;
+                .page-title {
+                    color: #e4871c;
                     font-family: 'Rock Salt', cursive;
                     font-weight: normal;
-                    text-align: center;
-                    font-size: 1.5em;
-                }
-                
-                .navbar ul li a {
-                    font-size: 1.5em;
+                    justify-self: flex;
+                    font-size: 2em;
                 }
                 /* Info section */
                 
                 .wrapper {
                     text-align: center;
                 }
-                
-                h3 {
-                    margin: 15px;
-                    padding: 5px;
-                    font-family: 'Raleway', sans-serif;
-                    font-size: 1.2em;
-                    color: #691111;
-                }
+                /* Buttons */
                 
                 .btn {
                     position: relative;
@@ -60,6 +53,22 @@
                     padding: 5px;
                     text-transform: uppercase;
                     font-size: 1.5em;
+                }
+                
+                #restart {
+                    margin: 0 auto;
+                    background-color: #0fe008;
+                    font-size: 1.5rem;
+                    width: 2.5rem;
+                }
+                
+                .hidden {
+                    display: none;
+                }
+                /* Dashboard */
+                
+                .wrapper {
+                    margin-top: 20px;
                 }
                 
                 .row {
@@ -71,28 +80,40 @@
                 
                 .game-info {
                     font-family: 'Raleway', sans-serif;
-                    color: #5eff00;
+                    color: #3b030e;
                     font-size: 1.5em;
+                    font-weight: 600;
                 }
                 /* Game board */
                 
-                .box {
-                    width: 20%;
-                    margin: 2%;
+                .container {
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                }
+                
+                .card {
+                    width: calc(25% - 10px);
+                    margin: 5px;
+                    padding: 1%;
                     display: inline-block;
+                    height: calc(33.333% - 10px);
                     line-height: 80px;
                     text-align: center;
                     cursor: pointer;
-                    padding: 1%;
                     box-shadow: 2px 2px #633939;
-                    height: 80px;
                 }
                 
-                .back {
+                .back-face {
                     display: block;
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                    background-image: url("https://i.imgur.com/bTu45F0.png?1");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
                 }
                 
-                .front {
+                .front-face {
                     display: none;
                 }
                 /* Media Queries */
