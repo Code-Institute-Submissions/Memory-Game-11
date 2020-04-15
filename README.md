@@ -9,7 +9,7 @@ The main idea of this project was to create and build a single page application 
 ## UX 
 Objectives of the game application: 
 
-* Create a game that suits for all ages to improve, but focuses on children between 4-12 years old to learn colors
+* Create a game that suits for all ages to improve visual memory, but focuses on children between 4-12 years old to learn colors and simple logical tasks
 * Simple, intuitive and user friendly
 * Player can select through 3 difficulty levels: easy mode, moderate and hard mode
 * Availability of the game on all the screen sizes and all platforms
