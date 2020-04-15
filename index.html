@@ -2,67 +2,66 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Associated links for styles/fonts & frameworks -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/cb5978f41d.js" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+	<!-- Associated links for styles/fonts & frameworks -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/cb5978f41d.js" crossorigin="anonymous"></script>
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Memory Game</title>
+	<title>Memory Game</title>
 </head>
 
 <body>
-    <header class="container-fluid bg-custom">
-        <div class="row d-inline-flex">
-            <a class="logo" aria-label=" Brand Logo & Link to refresh " href="index.html ">
-                <img src="assets/img/cards.png" alt="logo " title="Flip and Match Logo ">
-            </a>
-            <h1 class="col page-title text-center">Flip and Match</h1>
-        </div>
-    </header>
-    <div class="col-12 col-md-5 col-lg-4 dashboard px-3 pt-xl-3"></div>
-    <div class="dashboard wrapper">
-        <button type="button" class="startBtn btn btn-danger btn-lg">Start</button>
-        <button type="reset" value="Reset" id="restart">
-            <i class="pointer fas fa-redo-alt"><br></i>
+	<h1 class="page-title">Flip It</h1>
+
+	<!-- Dashboard-->
+	<div class="dashboard wrapper">
+		<button type="button" class="startBtn btn btn-danger btn-lg" id="start" onclick="resetTimer();">Start</button>
+		<button type="button" class="resetBtn btn btn-success btn-xm" id="reset" onclick="resetTimer();">
+            <i class="fas fa-redo-alt"><br></i>
         </button>
-        <div class="row justify-content-md-around">
-            <div class="game-info col-5 col-md-auto">
-                <i class="far fa-clock"></i> Time: <span id="time">99</span>
-            </div>
-            <div class="game-info col-5 col-md-auto">
-                <i class="fas fa-dice"></i> Flips: <span id="score">0</span>
-            </div>
-            <div class="game-info col-2 col-md-1">
-                <i class="fas fa-volume-up"></i>
-                <button type="button" id="audio"></button>
-            </div>
-        </div>
-    </div>
+		<button type="button" class="pauseBtn btn btn-success btn-xm" id="pause" onclick="stopTimer();">
+            <i class="far fa-pause-circle"><br></i>
+        </button>
+		<div class="row justify-content-around">
+			<div class="game-info col-6 col-md-auto timer">
+				<i class="far fa-clock"></i> Timer: <span id="minutes">00</span>:<span id="seconds">00</span>
+				<span class="hidden" id="countdown">90</span>
+			</div>
+			<div class="game-info col-6 col-md-auto">
+				<i class="fas fa-dice"></i> Clicks: <span id="score">0</span>
+			</div>
+		</div>
+	</div>
 
+	<!-- Gameboard -->
+	<div class="game game-container container"></div>
 
-    <!-- Gameboard -->
-    <div class="game container"></div>
+	<!-- MODALS -->
 
-    <!-- MODALS -->
+	<!-- Footer -->
 
-    <!-- Footer -->
+	<!-- Audio files -->
 
-    <!-- Audio files -->
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
-    <!-- Custom javascript file -->
-    <script src="assets/js/script.js "></script>
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js "
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous ">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous ">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous ">
+	</script>
+	<!-- Custom javascript file -->
+	<script src="assets/js/script.js "></script>
 
 </body>
 

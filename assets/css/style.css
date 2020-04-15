@@ -11,6 +11,7 @@
                     height: 100vh;
                     width: 100vw;
                     font-size: 1rem;
+                    /* background: linear-gradient(to bottom, rgba(31, 183, 145, 1) 0%, rgba(31, 183, 145, 1) 19%, rgba(145, 231, 64, 1) 38%, rgba(145, 231, 64, 1) 100%); */
                 }
                 
                 body {
@@ -23,27 +24,15 @@
                 }
                 /* Header */
                 
-                .bg-custom {
-                    background-color: #000000;
-                }
-                
-                .logo {
-                    width: 50px;
-                    height: 50px;
-                    padding: 5px;
-                }
-                
                 .page-title {
-                    color: #e4871c;
+                    color: #e9d87b;
                     font-family: 'Rock Salt', cursive;
-                    font-weight: normal;
-                    justify-self: flex;
-                    font-size: 2em;
-                }
-                /* Info section */
-                
-                .wrapper {
+                    font-weight: 600;
                     text-align: center;
+                    font-size: 2.5em;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    text-shadow: 2px 2px 4px #c00b0b;
                 }
                 /* Buttons */
                 
@@ -53,11 +42,13 @@
                     padding: 5px;
                     text-transform: uppercase;
                     font-size: 1.5em;
+                    cursor: pointer;
                 }
                 
-                #restart {
-                    margin: 0 auto;
-                    background-color: #0fe008;
+                #reset,
+                #pause {
+                    padding: 2px;
+                    background-color: #85be1b;
                     font-size: 1.5rem;
                     width: 2.5rem;
                 }
@@ -68,44 +59,42 @@
                 /* Dashboard */
                 
                 .wrapper {
-                    margin-top: 20px;
+                    text-align: center;
                 }
                 
                 .row {
                     margin: 10px 20px;
                     padding: 5px;
-                    align-content: center;
-                    flex-wrap: nowrap;
                 }
                 
                 .game-info {
                     font-family: 'Raleway', sans-serif;
-                    color: #3b030e;
+                    color: #1d084d;
                     font-size: 1.5em;
                     font-weight: 600;
                 }
                 /* Game board */
                 
-                .container {
-                    margin-top: 40px;
-                    margin-bottom: 40px;
+                .game-container {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
                 }
                 
                 .card {
-                    width: calc(25% - 10px);
-                    margin: 5px;
+                    width: 21.5%;
+                    margin: 1.5%;
                     padding: 1%;
                     display: inline-block;
-                    height: calc(33.333% - 10px);
-                    line-height: 80px;
+                    line-height: 100px;
                     text-align: center;
                     cursor: pointer;
-                    box-shadow: 2px 2px #633939;
+                    -webkit-box-shadow: 10px 10px 10px 0px rgba(51, 41, 47, 1);
+                    -moz-box-shadow: 10px 10px 10px 0px rgba(51, 41, 47, 1);
+                    box-shadow: 10px 10px 10px 0px rgba(51, 41, 47, 1);
                 }
                 
                 .back-face {
                     display: block;
-                    font-size: 1.5rem;
                     font-weight: 900;
                     background-image: url("https://i.imgur.com/bTu45F0.png?1");
                     background-repeat: no-repeat;
@@ -119,14 +108,24 @@
                 /* Media Queries */
                 
                 @media (max-width: 575.98px) {
-                    .navbar-text {
-                        font-size: 1.1em;
+                    .page-title {
+                        font-size: 1.8em;
                     }
                     .row {
                         font-size: 0.8em;
                     }
                     .btn {
+                        position: relative;
+                        z-index: 1;
+                        padding: 3px;
                         text-transform: uppercase;
-                        font-size: 1em;
+                        font-size: 0.8em;
+                        cursor: pointer;
+                    }
+                    #reset,
+                    #pause {
+                        padding: 1px;
+                        font-size: 1.2rem;
+                        width: 1.5em;
                     }
                 }
