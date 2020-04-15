@@ -88,5 +88,5 @@ If you wish to run this code locally:
 * [Sound FX]()
 
 ### Acknowledgements
-* Many thanks to Code Institute team, speacial big thanks to my mentor [Aaron Sinnot] for the kind and professional suport and understanding and to all [Slack]comunity
-* [Laurence Svekis] from [Udemy](https://www.udemy.com/course/jquery-game-course/) for the wonderful tutorial
+* Many thanks to Code Institute team, speacial big thanks to my mentor Aaron Sinnot for the kind and professional suport and understanding and to all [Slack](https://app.slack.com/client/T0L30B202/C7W83ABJ7)comunity
+* Laurence Svekis from [Udemy](https://www.udemy.com/course/jquery-game-course/) for the wonderful tutorial
