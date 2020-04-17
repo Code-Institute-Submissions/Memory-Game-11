@@ -27,35 +27,32 @@ Features of this website are:
 * Multiple sounds for each functionality: background music, flipping cards,buttons victory and game over 
 
 ###  Future features
-- []Sound button
-- []Difficulty levels radio buttons
-- []Different themes to be choosen from 
-- []Axial rotation of the cards when flipped
-- []Cards display zoomed in when hovered
-- []Lucky: matching a pair from the first attempt - special sound
-- []Super-lucky: combo for 2 or more matched cards - special sound
-- []Info modal
-- []Parental advise modal
+- [ ]Sound button
+- [ ]Difficulty levels radio buttons
+- [ ]Different themes to be choosen from 
+- [ ]Axial rotation of the cards when flipped
+- [ ]Cards display zoomed in when hovered
+- [ ]Lucky: matching a pair from the first attempt - special sound
+- [ ]Super-lucky: combo for 2 or more matched cards - special sound
+- [ ]Info modal
+- [ ]Parental advise modal
 
 ## Technologies used
-* HTML5
-* CSS3
-* JavaScript
-* Google Fonts
-* Visual Studio Code + Live Server
-* Git
-* Github
-* Markdown (README.md file)
-* [Google Fonts](https://fonts.google.com)
-* Google Chrome developer tools
-* [Balsamiq](https://balsamiq.com/wireframes/) for mockups
-* [Imgur](https://imgur.com/) to store all images
-* [Favicon.io](https://favicon.io/favicon-converter/)
+- This project utilizes HTML, CSS and JavaScript as main programming languages.
+- [Google Fonts]()
+- Visual Studio Code with the Live Server
+- [Github]
+- [Markdown](https://guides.github.com/features/mastering-markdown/) 
+- [Google Fonts](https://fonts.google.com) 
+- Google Chrome developer tools for test and debugging 
+- [Balsamiq](https://balsamiq.com/wireframes/) to create and edit the wireframes
+- [Imgur](https://imgur.com/) to store all images
+- [Favicon.io](https://favicon.io/favicon-converter/)
 
 ## Testing
-* [HTML validator](https://validator.w3.org/#validate_by_input)
-* [CSS validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-* [JsHint](https://jshint.com)
+- [HTML validator](https://validator.w3.org/#validate_by_input)
+- [CSS validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- [JsHint](https://jshint.com)
 
 ### Manual testing
 1. Pressed on every button and check functionality on several stages
@@ -65,28 +62,39 @@ Features of this website are:
 * Restart function 
 
 ## Deployment
+
 ### How to deploy code locally
 If you wish to run this code locally: 
 
-* Download or clone the code from the Github [repository](https://github.com/morphy80/Memory-Game)
-* Click on "Clone or download" to Download ZIP or clone by copying the link
-* Uncompress the ZIP folder to view or clone into VS Code using Source Control and paste the link in "Clone" window
+- Download or clone the code from the Github [repository](https://github.com/morphy80/Memory-Game)
+- Click on "Clone or download" to Download ZIP or clone by copying the link
+- Uncompress the ZIP folder to view or clone into VS Code using Source Control and paste the link in "Clone" window
 
 ## Credits
+
 ### Code
-* Javascript [tutorial](https://www.udemy.com/course/jquery-game-course/) 
-* [StackOverflow](https://stackoverflow.com/questions/49425137/how-to-stop-timer-in-javascript) for accurate timer in seconds and minutes
+- Javascript [tutorial](https://www.udemy.com/course/jquery-game-course/) 
+- [StackOverflow](https://stackoverflow.com/questions/49425137/how-to-stop-timer-in-javascript) for accurate timer in seconds and minutes.
 
 ### Images
-* [Imgur](https://i.imgur.com/bTu45F0.png?1) for back-side of the cards
+- [Imgur](https://i.imgur.com/bTu45F0.png?1) for back-side of the cards
 
 ### Audio
-* [Card flip]()
-* [Matched]()
-* [Victory]()
-* [Game over]()
-* [Sound FX]()
+* All the sounds were taken from the same audio source[Orange free sounds](http://www.orangefreesounds.com/)
+- [Button click](http://www.orangefreesounds.com/)
+- [Card flip](http://www.orangefreesounds.com/)
+- [Matched-correct](http://www.orangefreesounds.com/)
+- [Failed match](http://www.orangefreesounds.com/)
+- [Victory](http://www.orangefreesounds.com/)
+- [Game over](http://www.orangefreesounds.com/)
+- [Sound FX](http://www.orangefreesounds.com/)
 
 ### Acknowledgements
-* Many thanks to Code Institute team, speacial big thanks to my mentor Aaron Sinnot for the kind and professional suport and understanding and to all [Slack](https://app.slack.com/client/T0L30B202/C7W83ABJ7)comunity
-* Laurence Svekis from [Udemy](https://www.udemy.com/course/jquery-game-course/) for the wonderful tutorial
+
+Special thanks to:
+- Code Institute team, speacial big thanks to my mentor Aaron Sinnot for the kind and professional suport and understanding
+ and to all students from [Slack](https://app.slack.com/client/T0L30B202/C7W83ABJ7) comunity for helping, guiding and supporting me.
+- Laurence Svekis from [Udemy](https://www.udemy.com/course/jquery-game-course/) for the wonderful tutorial.
+
+#### Disclaimer
+The content of this website, including the images used, are for educational purposes only.
