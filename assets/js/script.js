@@ -1,11 +1,19 @@
     // Global variables
 
-    const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink', 'teal', 'gold'];
-    // const colorCardsArray = ['red', 'blue'];
+    // const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink', 'teal', 'gold'];
+    // const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink'];
+    const colorCardsArray = ['red', 'blue'];
+
     const game = {};
-    let button;
-    let countdown = 90;
+    let silence = false;
     let sec = 0;
+
+    // Initialize even listeners
+    $('#start').click(startGame);
+    $('#restart').click(startGame);
+    $('#restart').hide();
+    $('#pause').hide();
+    // $('#pause').click(togglePlaying);
 
     function pad(val) { return val > 9 ? val : "0" + val; }
     let func;
@@ -29,23 +37,17 @@
         sec = 0;
     }
 
-    // Toggle Playing 
-    // function togglePlaying() {
-    //     if (!gameOver()) {
-    //         game.play = true;
+    // Restart button
+    $('#restart').click(function() {
+        resetGame();
+    });
 
-    //     } else {
-    //         game.pause = true;
-    //         button.html('play')
-    //     }
-    // }
-
-    // Initialize even listeners
-    $('#start').click(startGame);
-    $('#reset').click(startGame);
-    $('#reset').hide();
-    $('#pause').hide();
-    // $('#pause').click(togglePlaying);
+    function resetGame() {
+        resetTimer();
+        startTimer();
+        game.clicks = 0;
+        $('#score').text(game.clicks);
+    }
 
     $('.game').on("click", ".active", function(event) {
         console.log($(this).data('val'));
@@ -69,7 +71,7 @@
                     }
                 } else {
                     game.pause = true;
-                    game.flip = setInterval(hideCard, 1000);
+                    game.flip = setInterval(hideCard, 500);
                 }
             }
         }
@@ -77,26 +79,19 @@
 
     // Game Over 
     function gameOver() {
-        console.log('*********GAMEOVER*********');
+        console.log('*****GAMEOVER*****');
         $('#start').show();
-        $('#reset').hide();
+        $('#restart').hide();
         $('#pause').hide();
         $('#score').text(game.clicks);
         stopTimer();
         // alert('GAME OVER! ' + game.clicks + 'clicks');
     }
 
-    // Reset
-    function reset() {
-        console.log('RESET');
-        game.clicks = 0;
-    }
-
     function removeItems(val) {
-        console.log(game.newArray);
         game.newArray = game.newArray.filter(function(ele) {
             return ele != val;
-        })
+        });
     }
 
     function hideCard() {
@@ -117,21 +112,21 @@
     function arrayRandomize(arr) {
         arr.sort(function() {
             return .5 - Math.random();
-        })
+        });
     }
     //Start the game
     function startGame() {
         console.log('start');
         $('#start').hide();
-        $('#reset').show();
+        $('#restart').show();
         $('#pause').show();
+        resetTimer();
         startTimer();
-        reset();
         game.clicks = 0;
+        $('#score').text(game.clicks);
         game.pause = false;
         game.sel = [];
         game.newArray = colorCardsArray.concat(colorCardsArray);
-        console.log(game.newArray);
         arrayRandomize(game.newArray);
         $('.game').html('');
         $.each(game.newArray, function(key, value) {
@@ -150,4 +145,4 @@
             card.append(front);
             $('.game').append(card);
         });
-    } 
+    }
