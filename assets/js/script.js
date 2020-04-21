@@ -3,31 +3,92 @@
     // const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink', 'teal', 'gold'];
     // const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink'];
     const colorCardsArray = ['red', 'blue'];
-
     const game = {};
     let silence = false;
-    let sec = 0;
 
     // Initialize even listeners
     $('#start').click(startGame);
     $('#restart').click(startGame);
     $('#restart').hide();
-    $('#pause').hide();
-    // $('#pause').click(togglePlaying);
+    $('#mute').hide();
+    $('#bgMusic')[0].play();
+    this.bgMusic.loop = true;
 
+    // play button click audio on all button elements
+    $('.btn').click(function() {
+        playButtonAudio();
+    });
+
+    function playButtonAudio() {
+        $('#buttonClickAudio')[0].currentTime = 0;
+        $('#buttonClickAudio')[0].play();
+    }
+    // Mute button
+    $('#mute').click(function() {
+        muteAudio();
+    });
+
+    // mute audio function, original code from: https://css-tricks.com/forums/topic/mute-unmute-sounds-on-website/
+    function muteAudio() {
+
+        let allaudio = $('audio');
+
+        if (silence) {
+            for (let j = 0; j < allaudio.length; j++) {
+                allaudio[j].muted = false;
+            }
+            silence = false;
+        } else {
+            for (let j = 0; j < allaudio.length; j++) {
+                allaudio[j].muted = true;
+            }
+            silence = true;
+        }
+        $('#mute i').toggleClass('fa-volume-off');
+    }
+
+    // Game play
+    $('.game').on("click", ".active", function(event) {
+        if (!game.pause) {
+            game.clicks++;
+            $('#score').text(game.clicks);
+            game.sel.push($(this));
+            $(this).removeClass('active');
+            $(this).find('.back-face').hide();
+            $(this).find('.front-face').show();
+            $('#cardFlipAudio')[0].play();
+            if (game.sel.length === 2) {
+                if (game.sel[0].data('val') == game.sel[1].data('val')) {
+                    game.pause = false;
+                    removeItems(game.sel[0].data('val'));
+                    game.sel = [];
+                    if (game.newArray.length == 0) {
+                        gameOver();
+                        stopTimer();
+                    }
+                } else {
+                    game.pause = true;
+                    game.flip = setInterval(hideCard, 500);
+                }
+            }
+        }
+    });
+
+    //Setting the pad function for timer
     function pad(val) { return val > 9 ? val : "0" + val; }
-    let func;
+    let myTimer;
+    let sec = 0;
 
-    //Start timer
+    //Timer
     function startTimer() {
-        func = setInterval(function() {
+        myTimer = setInterval(function() {
             $('#seconds').html(pad(++sec % 60));
             $('#minutes').html(pad(parseInt(sec / 60, 10)));
         }, 1000);
     }
 
     function stopTimer() {
-        clearInterval(func);
+        clearInterval(myTimer);
     }
 
     function resetTimer() {
@@ -42,6 +103,7 @@
         resetGame();
     });
 
+    // Reset game
     function resetGame() {
         resetTimer();
         startTimer();
@@ -49,43 +111,13 @@
         $('#score').text(game.clicks);
     }
 
-    $('.game').on("click", ".active", function(event) {
-        console.log($(this).data('val'));
-        if (!game.pause) {
-            game.clicks++;
-            $('#score').text(game.clicks);
-            game.sel.push($(this));
-            $(this).removeClass('active');
-            $(this).find('.back-face').hide();
-            $(this).find('.front-face').show();
-            if (game.sel.length === 2) {
-                if (game.sel[0].data('val') == game.sel[1].data('val')) {
-                    game.pause = false;
-                    console.log('Match');
-                    removeItems(game.sel[0].data('val'));
-                    game.sel = [];
-                    if (game.newArray.length == 0) {
-                        console.log('GAME OVER');
-                        gameOver();
-                        stopTimer();
-                    }
-                } else {
-                    game.pause = true;
-                    game.flip = setInterval(hideCard, 500);
-                }
-            }
-        }
-    });
-
     // Game Over 
     function gameOver() {
-        console.log('*****GAMEOVER*****');
         $('#start').show();
         $('#restart').hide();
-        $('#pause').hide();
         $('#score').text(game.clicks);
+        $('#winAudio')[0].play();
         stopTimer();
-        // alert('GAME OVER! ' + game.clicks + 'clicks');
     }
 
     function removeItems(val) {
@@ -95,7 +127,6 @@
     }
 
     function hideCard() {
-        console.log('no match');
         flipper(game.sel[0]);
         flipper(game.sel[1]);
         clearInterval(game.flip);
@@ -107,6 +138,7 @@
         el.addClass('active');
         el.find('.back-face').show();
         el.find('.front-face').hide();
+        $('#cardFlipAudio')[0].play();
     }
     // Shuffle function
     function arrayRandomize(arr) {
@@ -116,10 +148,9 @@
     }
     //Start the game
     function startGame() {
-        console.log('start');
         $('#start').hide();
         $('#restart').show();
-        $('#pause').show();
+        $('#mute').show();
         resetTimer();
         startTimer();
         game.clicks = 0;
