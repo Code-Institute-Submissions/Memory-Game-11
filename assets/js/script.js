@@ -1,18 +1,17 @@
     // Global variables
 
-    // const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink', 'teal', 'gold'];
+    const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink', 'teal', 'gold'];
     // const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink'];
-    const colorCardsArray = ['red', 'blue'];
+    // const colorCardsArray = ['red', 'blue'];
     const game = {};
     let silence = false;
+    bgMusic.loop = true;
 
     // Initialize even listeners
     $('#start').click(startGame);
     $('#restart').click(startGame);
     $('#restart').hide();
     $('#mute').hide();
-    $('#bgMusic')[0].play();
-    this.bgMusic.loop = true;
 
     // play button click audio on all button elements
     $('.btn').click(function() {
@@ -68,7 +67,7 @@
                     }
                 } else {
                     game.pause = true;
-                    game.flip = setInterval(hideCard, 500);
+                    game.flip = setInterval(hideCard, 800);
                 }
             }
         }
@@ -132,14 +131,15 @@
         clearInterval(game.flip);
         game.sel = [];
         game.pause = false;
+        $('#cardFlipAudio')[0].play();
     }
 
     function flipper(el) {
         el.addClass('active');
         el.find('.back-face').show();
         el.find('.front-face').hide();
-        $('#cardFlipAudio')[0].play();
     }
+
     // Shuffle function
     function arrayRandomize(arr) {
         arr.sort(function() {
@@ -151,6 +151,7 @@
         $('#start').hide();
         $('#restart').show();
         $('#mute').show();
+        $('#bgMusic')[0].play();
         resetTimer();
         startTimer();
         game.clicks = 0;
