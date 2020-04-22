@@ -5,6 +5,11 @@
     // const colorCardsArray = ['red', 'blue'];
     const game = {};
     let silence = false;
+    buttonClickAudio.volume = 0.5;
+    cardFlipAudio.volume = 0.5;
+    correctMatchAudio.volume = 0.5;
+    winAudio.volume = 0.8;
+    bgMusic.volume = 0.6;
     bgMusic.loop = true;
 
     // Initialize even listeners
