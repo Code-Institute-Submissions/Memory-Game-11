@@ -59,6 +59,7 @@
             if (game.sel.length === 2) {
                 if (game.sel[0].data('val') == game.sel[1].data('val')) {
                     game.pause = false;
+                    $('#correctMatchAudio')[0].play();
                     removeItems(game.sel[0].data('val'));
                     game.sel = [];
                     if (game.newArray.length == 0) {
@@ -67,8 +68,9 @@
                     }
                 } else {
                     game.pause = true;
-                    game.flip = setInterval(hideCard, 800);
+                    game.flip = setInterval(hideCard, 1000);
                 }
+                //check match
             }
         }
     });
