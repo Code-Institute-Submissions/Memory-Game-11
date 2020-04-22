@@ -81,13 +81,11 @@ If you wish to run this code locally:
 
 ### Audio
 * All the sounds were taken from the same audio source[Orange free sounds](http://www.orangefreesounds.com/)
-- [Button click](http://www.orangefreesounds.com/)
-- [Card flip](http://www.orangefreesounds.com/)
-- [Matched-correct](http://www.orangefreesounds.com/)
-- [Failed match](http://www.orangefreesounds.com/)
-- [Victory](http://www.orangefreesounds.com/)
-- [Game over](http://www.orangefreesounds.com/)
-- [Sound FX](http://www.orangefreesounds.com/)
+- [Button click](http://www.orangefreesounds.com/switch-sound-effect/)
+- [Card flip](http://www.orangefreesounds.com/card-flip-sound-effect/)
+- [Matched-correct](http://www.orangefreesounds.com/coin-collect-sound-effect/)
+- [Victory](http://www.orangefreesounds.com/quiz-correct-wining-victory-sound-effect/)
+- [Background music](http://www.orangefreesounds.com/calm-garden-sounds-for-relaxation/)
 
 ### Acknowledgements
 
