@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: "Raleway", sans-serif;
-    background-image: url("https://i.imgur.com/41Q3v0A.jpg");
+    background-image: url(/assets/img/game-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -102,7 +102,7 @@ body {
 .back-face {
     display: block;
     font-weight: 900;
-    background-image: url("https://i.imgur.com/bTu45F0.png?1");
+    background-image: url(/assets/img/smiley-emoticon.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
