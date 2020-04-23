@@ -71,6 +71,24 @@ body {
     cursor: pointer;
 }
 
+#infoModal, .modal
+{
+    font-family: inherit;
+}
+
+/* --- Floating button --- */
+
+.float-button {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    color: rgba(0, 0, 0, .7);
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    cursor: pointer;
+}
+
 .hidden {
     display: none;
 }
@@ -103,19 +121,6 @@ body {
     display: none;
 }
 
-/* --- Floating button --- */
-
-.float-button {
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    color: rgba(0, 0, 0, .7);
-    text-align: center;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-    z-index: 99;
-    cursor: pointer;
-}
-
 /* Media Queries */
 
 @media (max-width: 576px) {
@@ -139,5 +144,10 @@ body {
         padding: 1px;
         font-size: 0.8em;
         width: 1.5em;
+    }
+    #infoModal,
+    .modal {
+        font-family: inherit;
+        font-size: 0.8em;
     }
 }
