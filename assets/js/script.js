@@ -220,10 +220,10 @@
         });
     }
 
-    /**When the element with the ID howtoPlay is clicked
+    /**When the element with the ID infoModal is clicked
      * Info Modal is shown
      **/
 
-    $("#howtoPlay").click(function() {
+    $("#infoModal").click(function() {
         $("#info").modal("show");
     });

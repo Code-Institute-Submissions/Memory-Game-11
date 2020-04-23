@@ -71,8 +71,8 @@ body {
     cursor: pointer;
 }
 
-#infoModal, .modal
-{
+#infoModal,
+ .modal {
     font-family: inherit;
 }
 
