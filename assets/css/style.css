@@ -77,16 +77,12 @@ body {
 
 /* Game board */
 
-.game {
-    margin-top: 20px;
-}
-
 .card {
     width: 21%;
     margin: 2%;
     padding: 1%;
     display: inline-block;
-    line-height: 100px;
+    line-height: 90px;
     text-align: center;
     cursor: pointer;
     -webkit-box-shadow: 10px 10px 10px 0px rgba(51, 41, 47, 1);
