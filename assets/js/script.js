@@ -185,3 +185,11 @@
             $('.game').append(card);
         });
     }
+
+    /**When the element with the ID howtoPlay is clicked
+     * Info Modal is shown
+     **/
+
+    $("#howtoPlay").click(function() {
+        $("#info").modal("show");
+    });
