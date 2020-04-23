@@ -22,56 +22,75 @@
 	<h1 class="page-title">Flip It !</h1>
 
 	<!-- Dashboard-->
-<div class="dashboard wrapper">
-        <button type="button" class="dashboard-btn btn btn-danger btn-lg" id="start" aria-label="Start Button">Start</button>
-        <button type="button" class="dashboard-btn btn btn-success btn-xm" id="restart" aria-label="Restart Button">
+	<div class="dashboard wrapper">
+		<!-- Buttons -->
+		<button type="button" class="dashboard-btn btn btn-danger btn-lg" id="start" aria-label="Start Button">Start</button>
+		<button type="button" class="dashboard-btn btn btn-success btn-xm" id="restart" aria-label="Restart Button">
             <i class="fas fa-redo-alt"><br/></i>
         </button>
-        <button type="button" id="mute" class="dashboard-btn btn btn-success btn-xm" aria-label="Mute Button">
+		<button type="button" id="mute" class="dashboard-btn btn btn-success btn-xm" aria-label="Mute Button">
             <i class="fas fa-volume-mute" title="mute button"></i> 
         </button>
-        <div class="row justify-content-around">
-            <div class="game-info col-6 timer">
-                <i class="far fa-clock"></i> Timer: <span id="minutes">00</span>:<span id="seconds">00</span>
-                <span class="hidden" id="countdown">90</span>
-            </div>
-            <div class="game-info col-6">
-                <i class="fas fa-dice"></i> Moves: <span id="score">0</span>
-            </div>
-        </div>
-    </div>
+		<!-- Difficulty selector radio buttons -->
+		<div class="row difficulty-selector justify-content-center">
+			<div class="btn-group btn-group-xm btn-group-toggle" id="btnSel" data-toggle="buttons">
+				<label class="btn btn-success active buttons white slate">
+                    <input type="radio" name="easy" id="easy" checked> Easy
+                </label>
+				<label class="btn btn-success buttons white slate">
+                    <input type="radio" name="medium" id="medium"> Medium
+                </label>
+				<label class="btn btn-success buttons white slate">
+                    <input type="radio" name="hard" id="hard"> Hard
+                </label>
+			</div>
+		</div>
+		<!-- Dashboard info -->
+		<div class="row justify-content-around">
+			<div class="game-info col-6 timer">
+				<i class="far fa-clock"></i> Timer: <span id="minutes">00</span>:<span id="seconds">00</span>
+				<span class="hidden" id="countdown">90</span>
+			</div>
+			<div class="game-info col-6">
+				<i class="fas fa-dice"></i> Moves: <span id="score">0</span>
+			</div>
+		</div>
+	</div>
 
 	<!-- Gameboard -->
 	<div class="game container"></div>
 
 	<!-- User Info Modal -->
-    <div class="float-button" id="infoModal"><i class="pointer far fa-question-circle" id="howtoPlay"><br>How to play</i>
-    </div>
-    <div class="modal" tabindex="-1" role="dialog" id="info">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header no-border">
-                    <h5 class="modal-title">How to play</h5>
-                    <button type="button" class="close white" data-dismiss="modal" aria-label="Close">
+	<div class="float-button" id="infoModal">
+		<i class="pointer far fa-question-circle" id="howtoPlay"><br>How to play</i>
+	</div>
+	<div class="modal" tabindex="-1" role="dialog" id="info">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header no-border">
+					<h5 class="modal-title">How to play</h5>
+					<button type="button" class="close white" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body">
-                    <p>Click on a card to flip it over and see the color on the other side, try to find the other card that matches its color. Match all pairs to completed the game. Only two cards can be flipped at a time.<br><br>Try to complete the game
+				</div>
+				<div class="modal-body">
+					<p>Click on a card to flip it over and see the color on the other side, try to find the other card
+						that matches its color. Match all pairs to completed the game. Only two cards can be flipped at
+						a time.<br><br>Try to complete the game
                         in the shortest amount of time with the least amount of moves.
-                        <br><br>You can restart the game at any time by pressing the restart button.
-                        <br><br>Good luck! <i class="far fa-thumbs-up"></i></p>
-                </div>
-            </div>
-        </div>
-    </div>
+						<br><br>You can restart the game at any time by pressing the restart button.
+						<br><br>Good luck! <i class="far fa-thumbs-up"></i></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Audio files -->
-    <audio id="bgMusic" src="assets/audio/background.mp3"></audio>
-    <audio id="cardFlipAudio" src="assets/audio/card-flip.mp3"></audio>
-    <audio id="correctMatchAudio" src="assets/audio/correct-match.mp3"></audio>
-    <audio id="buttonClickAudio" src="assets/audio/switch.mp3"></audio>
-    <audio id="winAudio" src="assets/audio/win-victory.mp3"></audio>
+	<audio id="bgMusic" src="assets/audio/background.mp3"></audio>
+	<audio id="cardFlipAudio" src="assets/audio/card-flip.mp3"></audio>
+	<audio id="correctMatchAudio" src="assets/audio/correct-match.mp3"></audio>
+	<audio id="buttonClickAudio" src="assets/audio/switch.mp3"></audio>
+	<audio id="winAudio" src="assets/audio/win-victory.mp3"></audio>
 
 	<!-- Scripts -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js "
