@@ -17,7 +17,7 @@
     bgMusic.loop = true;
 
     // Timer variables
-    let myTimer;
+    let myTimer = null;
     let sec = 0;
 
     // Initialize even listeners
