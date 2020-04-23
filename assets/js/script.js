@@ -1,9 +1,13 @@
     // Global variables
 
-    const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink', 'teal', 'gold'];
-    // const colorCardsArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink'];
-    // const colorCardsArray = ['red', 'blue'];
+    // Cards arrays
+    const easyArray = ['red', 'blue', 'green', 'purple', ];
+    const mediumArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink'];
+    const hardArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink', 'teal', 'gold'];
     const game = {};
+    let colorCardsArray = [];
+    
+    // Audio variables 
     let silence = false;
     buttonClickAudio.volume = 0.5;
     cardFlipAudio.volume = 0.5;
@@ -11,6 +15,10 @@
     winAudio.volume = 0.8;
     bgMusic.volume = 0.6;
     bgMusic.loop = true;
+
+    // Timer variables
+    let myTimer;
+    let sec = 0;
 
     // Initialize even listeners
     $('#start').click(startGame);
@@ -32,7 +40,7 @@
         muteAudio();
     });
 
-    // mute audio function, original code from: https://css-tricks.com/forums/topic/mute-unmute-sounds-on-website/
+    // Mute audio function, original code from: https://css-tricks.com/forums/topic/mute-unmute-sounds-on-website/
     function muteAudio() {
 
         let allaudio = $('audio');
@@ -51,7 +59,35 @@
         $('#mute i').toggleClass('fa-volume-off');
     }
 
-    // Game play
+     /**When an element with the class buttons is clicked difficulty is set 
+     * with the ID of the child element that was clicked
+     **/
+
+    $(".buttons").click(function() {
+        difficulty(this.children[0].id);
+    });
+
+    //  When difficulty is set with a value it will run the code associated with that "case"
+
+    function difficulty(value) {
+        switch (value) {
+            case "easy":
+                startGame();
+                colorCardsArray = easyArray;
+                break;
+            case "medium":
+                startGame();
+                colorCardsArray = mediumArray;
+                break;
+            case "hard":
+                startGame();
+                colorCardsArray = hardArray;
+            default:
+                break;
+        }
+    };
+
+    // Game play event listeners
     $('.game').on("click", ".active", function(event) {
         if (!game.pause) {
             game.clicks++;
@@ -80,12 +116,10 @@
         }
     });
 
-    //Setting the pad function for timer
+    // Setting the pad function for timer
     function pad(val) { return val > 9 ? val : "0" + val; }
-    let myTimer;
-    let sec = 0;
-
-    //Timer
+    
+    // Timer functions that can be started, stoped and reseted 
     function startTimer() {
         myTimer = setInterval(function() {
             $('#seconds').html(pad(++sec % 60));
@@ -153,7 +187,7 @@
             return .5 - Math.random();
         });
     }
-    //Start the game
+    // Starts the game function that creates the html elements
     function startGame() {
         $('#start').hide();
         $('#restart').show();
@@ -165,7 +199,7 @@
         $('#score').text(game.clicks);
         game.pause = false;
         game.sel = [];
-        game.newArray = colorCardsArray.concat(colorCardsArray);
+        game.newArray = colorCardsArray.concat(colorCardsArray); //doubles the selected array
         arrayRandomize(game.newArray);
         $('.game').html('');
         $.each(game.newArray, function(key, value) {
