@@ -151,7 +151,6 @@
         startTimer();
         game.clicks = 0;
         $('#score').text(game.clicks);
-        $('#winModal').modal('hide');
     }
 
     // Game Over 
@@ -159,6 +158,7 @@
         $('#restart').hide();
         $('#score').text(game.clicks);
         $('#winAudio')[0].play();
+        $('#winModal').modal('show');
         stopTimer();
     }
 
@@ -194,6 +194,7 @@
         $('#restart').show();
         $('#mute').show();
         $('#bgMusic')[0].play();
+        $('#winModal').modal('hide');
         resetTimer();
         startTimer();
         game.clicks = 0;
