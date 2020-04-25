@@ -77,6 +77,10 @@ body {
     font-family: inherit;
 }
 
+.modal {
+    background-color: rgba(121, 70, 70, 0.3);
+}
+
 #close {
     margin-left: 0;
 }
