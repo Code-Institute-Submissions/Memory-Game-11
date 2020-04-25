@@ -21,7 +21,6 @@
     let sec = 0;
 
     // Initialize even listeners
-    $('#start').click(startGame);
     $('#restart').click(startGame);
     $('#restart').hide();
     $('#mute').hide();
@@ -63,7 +62,7 @@
      * with the ID of the child element that was clicked
      **/
 
-    $(".buttons").click(function() {
+    $('.buttons').click(function() {
         difficulty(this.children[0].id);
     });
 
@@ -74,14 +73,17 @@
             case "easy":
                 startGame();
                 colorCardsArray = easyArray;
+                selectedDifficulty = "easy";
                 break;
             case "medium":
                 startGame();
                 colorCardsArray = mediumArray;
+                selectedDifficulty = "medium";
                 break;
             case "hard":
                 startGame();
                 colorCardsArray = hardArray;
+                selectedDifficulty = "hard";
             default:
                 break;
         }
@@ -149,11 +151,11 @@
         startTimer();
         game.clicks = 0;
         $('#score').text(game.clicks);
+        $('#winModal').modal('hide');
     }
 
     // Game Over 
     function gameOver() {
-        $('#start').show();
         $('#restart').hide();
         $('#score').text(game.clicks);
         $('#winAudio')[0].play();
@@ -189,7 +191,6 @@
     }
     // Starts the game function that creates the html elements
     function startGame() {
-        $('#start').hide();
         $('#restart').show();
         $('#mute').show();
         $('#bgMusic')[0].play();
@@ -224,6 +225,6 @@
      * Info Modal is shown
      **/
 
-    $("#infoModal").click(function() {
-        $("#info").modal("show");
+    $('#infoModal').click(function() {
+        $('#info').modal('show');
     });
