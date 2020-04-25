@@ -24,7 +24,6 @@
 	<!-- Dashboard-->
 	<div class="dashboard wrapper">
 		<!-- Buttons -->
-		<!-- <button type="button" class="dashboard-btn btn btn-danger btn-lg" id="start" aria-label="Start Button">Start</button> -->
 		<button type="button" class="dashboard-btn btn btn-success btn-xm" id="restart" aria-label="Restart Button">
             <i class="fas fa-redo-alt"><br/></i>
         </button>
@@ -84,6 +83,26 @@
 			</div>
 		</div>
 	</div>
+
+    <!-- Win Modal-->
+    <div class="modal fade bd-example-modal-sm" id="winModal" tabindex="-1" role="dialog" aria-labelledby="winModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" id="win" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">You win!</h2>
+                    <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <h5>Play Again?</h5>
+                    <button id="btnSel" type="button" class="btn btn-success btn-sm" aria-label="Restart Button"> 
+                    <i class="fas fa-redo-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<!-- Audio files -->
 	<audio id="bgMusic" src="assets/audio/background.mp3"></audio>

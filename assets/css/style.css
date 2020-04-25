@@ -76,6 +76,14 @@ body {
     font-family: inherit;
 }
 
+#close {
+    margin-left: 0;
+}
+
+#modal-title {
+    margin: 0 auto;
+}
+
 /* --- Floating button --- */
 
 .float-button {
