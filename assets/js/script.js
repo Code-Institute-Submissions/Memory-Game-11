@@ -21,11 +21,13 @@
     let sec = 0;
 
     // Initialize even listeners
+
     $('#restart').click(startGame);
     $('#restart').hide();
     $('#mute').hide();
 
-    // play button click audio on all button elements
+    // Play button click audio on all button elements
+    
     $('.btn').click(function() {
         playButtonAudio();
     });
@@ -34,12 +36,15 @@
         $('#buttonClickAudio')[0].currentTime = 0;
         $('#buttonClickAudio')[0].play();
     }
+
     // Mute button
+
     $('#mute').click(function() {
         muteAudio();
     });
 
     // Mute audio function, original code from: https://css-tricks.com/forums/topic/mute-unmute-sounds-on-website/
+
     function muteAudio() {
 
         let allaudio = $('audio');
@@ -90,6 +95,7 @@
     };
 
     // Game play event listeners
+
     $('.game').on("click", ".active", function(event) {
         if (!game.pause) {
             game.clicks++;
@@ -119,9 +125,11 @@
     });
 
     // Setting the pad function for timer
+
     function pad(val) { return val > 9 ? val : "0" + val; }
     
     // Timer functions that can be started, stoped and reseted 
+
     function startTimer() {
         myTimer = setInterval(function() {
             $('#seconds').html(pad(++sec % 60));
@@ -141,11 +149,13 @@
     }
 
     // Restart button
+
     $('#restart').click(function() {
         resetGame();
     });
 
     // Reset game
+
     function resetGame() {
         resetTimer();
         startTimer();
@@ -154,6 +164,7 @@
     }
 
     // Game Over 
+
     function gameOver() {
         $('#restart').hide();
         $('#score').text(game.clicks);
@@ -162,11 +173,15 @@
         stopTimer();
     }
 
+    // Remove the matched cards from the array
+
     function removeItems(val) {
         game.newArray = game.newArray.filter(function(ele) {
             return ele != val;
         });
     }
+
+    // Flip the cards
 
     function hideCard() {
         flipper(game.sel[0]);
@@ -177,19 +192,24 @@
         $('#cardFlipAudio')[0].play();
     }
 
+    // Flip the cards back
+
     function flipper(el) {
         el.addClass('active');
         el.find('.back-face').show();
         el.find('.front-face').hide();
     }
 
-    // Shuffle function
+    // Shuffle function randomizing the selected array
+
     function arrayRandomize(arr) {
         arr.sort(function() {
             return .5 - Math.random();
         });
     }
+
     // Starts the game function that creates the html elements
+
     function startGame() {
         $('#restart').show();
         $('#mute').show();
@@ -228,4 +248,12 @@
 
     $('#infoModal').click(function() {
         $('#info').modal('show');
+    });
+
+    /**Reload the page when the button refresh is clicked on winModal
+     * This will reload the page destroying the older cache and displaying the contents from scratch 
+     **/
+
+    $('#refresh').click(function() {
+        location.reload(true);
     });

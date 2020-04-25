@@ -63,7 +63,8 @@ body {
 }
 
 #restart,
-#mute {
+#mute,
+#refresh {
     padding: 2px;
     background-color: #85be1b;
     font-size: 1.2rem;
@@ -148,7 +149,8 @@ body {
         cursor: pointer;
     }
     #restart,
-    #mute {
+    #mute,
+    #refresh {
         padding: 1px;
         font-size: 0.8em;
         width: 1.5em;
