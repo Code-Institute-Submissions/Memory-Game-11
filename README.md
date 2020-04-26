@@ -43,13 +43,25 @@ I created this game for the Interactive Frontend Development project.
 The project scope was to create the game using HTML, CSS and JavaScript, with the core focus being the functional logic created with JavaScript.
 
 ## UX 
-Objectives of the game application: 
 
-* Create a game that suits for all ages to improve visual memory, but focuses on children between 4-12 years old to learn colors and simple logical tasks
-* Simple, intuitive and user friendly
-* Player can select through 3 difficulty levels: easy mode, moderate and hard mode
-* Availability of the game on all the screen sizes and all platforms
-* No extra dependency, but the game itselft!
+### User Stories
+- As a player I want:
+* to create a game that suits for all ages to improve visual memory, but focuses on children between 4-12 years old to learn colors and simple logical tasks.
+* a simple, intuitive and user friendly game.
+* that the player can select through 3 difficulty levels: easy mode, moderate and hard mode, that are available at any point of the game.
+* an Info Modal about how to play the game.
+* a reset button that can restart the game any time.
+* that the timer can show me the actual time spend on this game.
+* that the score can be presented as "Moves" which alows the payer to see how many cards are clicked upon.
+* to hear relaxing nature sounds on the background when playing the game.
+* to see a joyfull and neutral background.
+* to hear sounds when I click and flip the cards.
+* to hear a sound when I matched a pair of cards.
+* to know when I have finished the game and to have the results displayed in a modal.
+* to hear and notice when I win the game.
+* to stop the sounds/mute whenever I want with a click of a button.
+* availability of the game on all the screen sizes and all platforms.
+* no extra dependency, but the game itselft!
 
 ## Features
 Features of this website are:
