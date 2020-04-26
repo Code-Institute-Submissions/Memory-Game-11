@@ -6,8 +6,7 @@
     - [Why This Project?](#Why-This-Project)
 - [**UX**](#UX)
   - [User Stories](#User-Stories)
-  - [Research](#Research)
-  - [Design](#Design)
+  - [Research and Design](#Research-And-Design)
   - [Wireframes](#Wireframes)
 - [**Features**](#Features)
   - [Functionality](#Functionality)
@@ -45,7 +44,8 @@ The project scope was to create the game using HTML, CSS and JavaScript, with th
 ## UX 
 
 ### User Stories
-- As a player I want:
+
+As a player I want:
 * to create a game that suits for all ages to improve visual memory, but focuses on children between 4-12 years old to learn colors and simple logical tasks.
 * a simple, intuitive and user friendly game.
 * that the player can select through 3 difficulty levels: easy mode, moderate and hard mode, that are available at any point of the game.
@@ -60,8 +60,26 @@ The project scope was to create the game using HTML, CSS and JavaScript, with th
 * to know when I have finished the game and to have the results displayed in a modal.
 * to hear and notice when I win the game.
 * to stop the sounds/mute whenever I want with a click of a button.
+* to refresh the page at the end of the game.
 * availability of the game on all the screen sizes and all platforms.
 * no extra dependency, but the game itselft!
+
+### Research And Design
+For a better understanding how the game works and what functionalities should be implemented, I have researched multiple existing versions of the game. 
+With all the information and sources founded on the internet as YouTube, Google Play Apps, Udemy, I have gained a clear idea for the design of my game version.
+
+I have found out that the majority of the versions have either very colorful images or very pitchy tones which will make the player have difficulty focusing and memorizing the cards. 
+Due to this reason I have chosen this particular design that renders only basic colors that are very easy to understand and keep a visual representation in the memory. 
+Besides, all the colors are named accordingly as the game targets mainly children and has an educational purpose.
+
+### Wireframes
+
+I have created my wireframes using Balsamiq and I've done separate wireframes for each difficulty level.
+There are 3 mockups including both desktop and mobile in each version of difficulty level, easy version of the mockup having also the Win Modal Pop-up shown. 
+The links to the files are below:
+* [Mockup easy mode](https://github.com/morphy80/Memory-Game/blob/master/assets/wireframes/Mockup%20Easy%20mode%20-%20MS2.CI.png)
+* [Mockup medium mode](https://github.com/morphy80/Memory-Game/blob/master/assets/wireframes/Mockup%20Medium%20mode%20-%20MS2.CI.png)
+* [Mockup hard mode](https://github.com/morphy80/Memory-Game/blob/master/assets/wireframes/Mockup%20Hard%20mode%20-%20MS2.CI.png)
 
 ## Features
 Features of this website are:
