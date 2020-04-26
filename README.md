@@ -11,8 +11,6 @@
 - [**Features**](#Features)
   - [Functionality](#Functionality)
   - [Existing Features](#Existing-Features)
-    - [Game Controls](#Game-Controls)
-    - [Difficulty levels](#Difficulty-Levels)
   - [Features Left To Implement](#Features-Left-To-Implement)
 - [**Technologies Used**](#Technologies-Used)
   - [Version Control](#Version-Control) 
@@ -80,28 +78,49 @@ The links to the files are below:
 * [Mockup easy mode](https://github.com/morphy80/Memory-Game/blob/master/assets/wireframes/Mockup%20Easy%20mode%20-%20MS2.CI.png)
 * [Mockup medium mode](https://github.com/morphy80/Memory-Game/blob/master/assets/wireframes/Mockup%20Medium%20mode%20-%20MS2.CI.png)
 * [Mockup hard mode](https://github.com/morphy80/Memory-Game/blob/master/assets/wireframes/Mockup%20Hard%20mode%20-%20MS2.CI.png)
+The wireframes target as much as possible the final result of the project and I consider there are no major differences.
 
 ## Features
-Features of this website are:
-* Game starts by pressing the "Start" button
-* There are two extra buttons, one for "Restart" and one to "Pause" the game at any point, which are displayed after the "Start" button has been pressed at the beginning of the game.
-* When hovered over the buttons or cards cursor changes to a "pointer hand" 
-* Cards display different images, back-side and when it's flipped over on the front-side
-* Timer counter in seconds and minutes 
-* Flipps counter as number of clicks
-* Time countdown for hard mode player choice
-* Multiple sounds for each functionality: background music, flipping cards,buttons victory and game over 
 
-###  Future features
-- [ ]Sound button
-- [ ]Difficulty levels radio buttons
-- [ ]Different themes to be choosen from 
-- [ ]Axial rotation of the cards when flipped
-- [ ]Cards display zoomed in when hovered
-- [ ]Lucky: matching a pair from the first attempt - special sound
-- [ ]Super-lucky: combo for 2 or more matched cards - special sound
-- [ ]Info modal
-- [ ]Parental advise modal
+### Functionality
+
+* Game starts by pressing one of the difficulty selector buttons.
+* Pointer changes to hand when hovered over the cards and buttons.
+* Cards have different color-images on front and the same pattern on the back.
+* Cards flip has an according sound for realism.
+* Timer that starts once the difficulty is selected.
+* Clicks are counted throughout the game and rendered into the "Moves" dashboard counter.
+* Button selector for all 3 difficulty levels: easy, medium and hard, which increase the number of the cards by 1 row for each level.
+* Restart button that restarts the current game "Timer" and "Moves".
+* Mute audio button that enables and disables all the sounds in the game, including background music.
+* "Win Modal" that appears when the game is completed that contains: time spend, number of clicks and a refresh page button.
+* Each game starts with a new shuffle cards array and displays only 2 selected at a time, making it impossible to 'cheat' what cards are rendered.
+* If the cards are matched they remain flipped and a matching sound plays.
+
+### Existing Features
+
+* Mobile friendly with a large spectrum of responsivness.
+* Game starts by pressing the difficulty level selector button.
+* There are two extra buttons, one for "Restart" and one to "Mute" the game at any point, which are displayed after the game starts.
+* Refresh page button displayed at the end of the game on "Win Modal".
+* "How to Play Modal" that can accessed whenever user wants to know how to play the game. 
+* When hovered over the buttons or cards cursor changes to a "pointer hand" 
+* Cards display different images, back-side and when it's flipped over on the front-side that are visually appealing.
+* Timer counter in seconds and minutes. 
+* Moves counter as number of clicks.
+* Multiple sounds for each functionality: background music, flipping cards, matching cards, all buttons, win sound when the is game over. 
+
+###  Features left to implement
+
+- [ ] **Different themes** to be choosen from.
+- [ ] **Axial rotation** of the cards when flipped - keyframes.
+- [ ] **Cards display** zoomed in when hovered - keyframes.
+- [ ] **Lucky-sound**: matching a pair from the first attempt - special sound.
+- [ ] **Super-lucky**: combo for 2 or more matched cards - special sound.
+- [ ] **Parental advise modal** to inform all the children's parents about playing this game and if the children are allowed to play it.
+- [ ] **Timer** starts on the first click of the card and not when the game mode is selected.
+- [ ] **Pause** game button that can pause the entire functionality of the game.
+- [ ] **Leaderboard** that will imply that the user enters his chosen data to be stored locally before entering the game and then accessing the database whenever pleases.
 
 ## Technologies used
 - This project utilizes HTML, CSS and JavaScript as main programming languages.
@@ -111,7 +130,7 @@ Features of this website are:
 - [Markdown](https://guides.github.com/features/mastering-markdown/) 
 - [Google Fonts](https://fonts.google.com) 
 - Google Chrome developer tools for test and debugging 
-- [Balsamiq](https://balsamiq.com/wireframes/) to create and edit the wireframes
+- [Balsamiq](https://balsamiq.com/wireframes/) to create and edit the wireframes.
 - [Imgur](https://imgur.com/) to store all images
 - [Favicon.io](https://favicon.io/favicon-converter/)
 
