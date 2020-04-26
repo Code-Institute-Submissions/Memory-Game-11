@@ -1,7 +1,7 @@
     // Global variables
 
     // Cards arrays
-    const easyArray = ['red', 'blue', 'green', 'purple', ];
+    const easyArray = ['red', 'blue', 'green', 'purple'];
     const mediumArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink'];
     const hardArray = ['red', 'blue', 'green', 'purple', 'yellow', 'pink', 'teal', 'gold'];
     const game = {};
@@ -92,32 +92,32 @@
             default:
                 break;
         }
-    };
+    }
 
     // Game play event listeners
 
     $('.game').on("click", ".active", function(event) {
         if (!game.pause) {
-            game.clicks++;
-            $('#score').text(game.clicks);
-            game.sel.push($(this));
+            game.clicks++; //number of clicks incremented by 1
+            $('#score').text(game.clicks); //score displayed as 'Moves:'
+            game.sel.push($(this)); //cards selected pushed into a new array
             $(this).removeClass('active');
             $(this).find('.back-face').hide();
             $(this).find('.front-face').show();
-            $('#cardFlipAudio')[0].play();
+            $('#cardFlipAudio')[0].play(); //sound for cards when flipped
             if (game.sel.length === 2) {
                 if (game.sel[0].data('val') == game.sel[1].data('val')) {
                     game.pause = false;
-                    $('#correctMatchAudio')[0].play();
+                    $('#correctMatchAudio')[0].play(); //sound for matched cards
                     removeItems(game.sel[0].data('val'));
-                    game.sel = [];
+                    game.sel = []; //emplty array for matched/selected cards
                     if (game.newArray.length == 0) {
                         gameOver();
                         stopTimer();
                     }
                 } else {
                     game.pause = true;
-                    game.flip = setInterval(hideCard, 1000);
+                    game.flip = setInterval(hideCard, 1000); // 1 second for the card to flip back 
                 }
                 //check match
             }
@@ -141,6 +141,8 @@
         clearInterval(myTimer);
     }
 
+    // Timer in html with 0 seconds and 0 minutes
+
     function resetTimer() {
         stopTimer();
         $('#seconds').html(pad(00));
@@ -154,7 +156,7 @@
         resetGame();
     });
 
-    // Reset game
+    // Reset game function that restart the current game from beginning with blank score and timer
 
     function resetGame() {
         resetTimer();
@@ -163,7 +165,9 @@
         $('#score').text(game.clicks);
     }
 
-    // Game Over 
+    /** Game Over function which hide the restart button, display the current moves and timer,
+     * stops the timer, plays the winAudio and pops the winModal
+    */
 
     function gameOver() {
         $('#restart').hide();
@@ -242,7 +246,7 @@
         });
     }
 
-    /**When the element with the ID infoModal is clicked
+    /** When the element with the ID infoModal is clicked
      * Info Modal is shown
      **/
 
@@ -250,11 +254,14 @@
         $('#info').modal('show');
     });
     
-    // winModal
+    /** winModal that appears at the end of each game will display
+    *  the current timer elapsed and the number of moves
+    **/
+
     $('#winModal').on('show.bs.modal', function(event) {
         let moves = $(event.relatedTarget);
         let timerHtml = $('.timer').html();
-        let winTime = timerHtml.replace("Timer:", "")
+        let winTime = timerHtml.replace("Timer:", "");
         content = $('#winScore').html("You finished the game in" + winTime + " with " + game.clicks + " moves."),
             modal = $(this);
         modal.find('.modal-body').html(content);
