@@ -1,10 +1,46 @@
-# **Flip It!** *Memory Game*
-## Interactive Front-end Web Development Project
+# [Flip It!](https://morphy80.github.io/Memory-Game/) - Milestone Project
 
-***[Give it a try](https://morphy80.github.io/Memory-Game/)***
+## Table of Contents
 
-## Purpose
-The main idea of this project was to create and build a single page application with enough complexity that proves my skills as a front-end developer. The creation of the game is targeting both my apprehention of Java Script and jQuery but the intrest of all categories of players , youngsters and adults, as well.
+- [**About**](#About)
+    - [Why This Project?](#Why-This-Project)
+- [**UX**](#UX)
+  - [User Stories](#User-Stories)
+  - [Research](#Research)
+  - [Design](#Design)
+  - [Wireframes](#Wireframes)
+- [**Features**](#Features)
+  - [Functionality](#Functionality)
+  - [Existing Features](#Existing-Features)
+    - [Game Controls](#Game-Controls)
+    - [Difficulty levels](#Difficulty-Levels)
+  - [Features Left To Implement](#Features-Left-To-Implement)
+- [**Technologies Used**](#Technologies-Used)
+  - [Version Control](#Version-Control) 
+- [**Testing**](#Testing)
+  - [Testing User Stories](#Testing-User-Stories)
+  - [Responsive Testing](#Responsive-Testing)
+  - [Validation](#Validation)
+  - [Bugs And Errors](#Bugs-And-Errors)
+- [**Deployment**](#Deployment)
+  - [Repository Link](#Repository-Link)
+  - [Running Code Locally](#Running-Code-Locally)
+- [**Credits**](#Credits)
+  - [Content](#Content)
+  - [Media](#Media)
+    - [Images](#Images)
+    - [Sounds](#Sounds)
+  - [Acknowledgements](#Acknowledgements)
+  - [Disclaimer](#Disclaimer)
+
+## About
+The main idea of this project was to create and build a single page application with enough complexity that proves my skills as a front-end developer.
+The creation of the game is targeting both my apprehention of Java Script and jQuery but the intrest of all categories of players , youngsters and adults, as well.
+
+### Why This Project?
+
+I created this game for the Interactive Frontend Development project. 
+The project scope was to create the game using HTML, CSS and JavaScript, with the core focus being the functional logic created with JavaScript.
 
 ## UX 
 Objectives of the game application: 
@@ -90,9 +126,9 @@ If you wish to run this code locally:
 ### Acknowledgements
 
 Special thanks to:
-- Code Institute team, speacial big thanks to my mentor Aaron Sinnot for the kind and professional suport and understanding
- and to all students from [Slack](https://app.slack.com/client/T0L30B202/C7W83ABJ7) comunity for helping, guiding and supporting me.
+- Code Institute team, speacial big thanks to my mentor [Aaron Sinnot](https://github.com/aaronsnig501) for the kind and professional suport and understanding
+ and to all my fellow students from [Slack](https://app.slack.com/client/T0L30B202/C7W83ABJ7) comunity for helping, guiding and supporting me.
 - Laurence Svekis from [Udemy](https://www.udemy.com/course/jquery-game-course/) for the wonderful tutorial.
 
-#### Disclaimer
-The content of this website, including the images used, are for educational purposes only.
+### Disclaimer
+The content of this website, including the images and sounds used, are for educational purposes only.
