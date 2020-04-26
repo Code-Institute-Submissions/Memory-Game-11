@@ -8,6 +8,11 @@
     let colorCardsArray = [];
     
     // Audio variables 
+    const bgMusic = new Audio("assets/audio/background.mp3");
+    const cardFlipAudio = new Audio("assets/audio/card-flip.mp3");
+    const correctMatchAudio = new Audio("assets/audio/correct-match.mp3");
+    const buttonClickAudio = new Audio("assets/audio/switch.mp3");
+    const winAudio = new Audio("assets/audio/win-victory.mp3");
     let silence = false;
     buttonClickAudio.volume = 0.5;
     cardFlipAudio.volume = 0.5;
@@ -78,7 +83,7 @@
             case "easy":
                 startGame();
                 colorCardsArray = easyArray;
-                selectedDifficulty = "easy";
+                let selectedDifficulty = "easy";
                 break;
             case "medium":
                 startGame();
@@ -89,6 +94,7 @@
                 startGame();
                 colorCardsArray = hardArray;
                 selectedDifficulty = "hard";
+                break;
             default:
                 break;
         }
@@ -208,7 +214,7 @@
 
     function arrayRandomize(arr) {
         arr.sort(function() {
-            return .5 - Math.random();
+            return 0.5 - Math.random();
         });
     }
 
