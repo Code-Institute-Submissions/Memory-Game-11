@@ -15,15 +15,14 @@
 - [**Technologies Used**](#Technologies-Used)
   - [Version Control](#Version-Control) 
 - [**Testing**](#Testing)
-  - [Testing User Stories](#Testing-User-Stories)
   - [Responsive Testing](#Responsive-Testing)
+  - [Manual Testing](#Manual-Testing)
   - [Validation](#Validation)
   - [Bugs And Errors](#Bugs-And-Errors)
 - [**Deployment**](#Deployment)
-  - [Repository Link](#Repository-Link)
-  - [Running Code Locally](#Running-Code-Locally)
+  - [How To Deploy Code Locally](#How-To-Deploy-Code-Locally)
 - [**Credits**](#Credits)
-  - [Content](#Content)
+  - [Code](#Code)
   - [Media](#Media)
     - [Images](#Images)
     - [Sounds](#Sounds)
@@ -112,7 +111,7 @@ The wireframes target as much as possible the final result of the project and I 
 
 ###  Features left to implement
 
-- [ ] **Different themes** to be choosen from.
+- [ ] **Different themes** to be chosen from.
 - [ ] **Axial rotation** of the cards when flipped - keyframes.
 - [ ] **Cards display** zoomed in when hovered - keyframes.
 - [ ] **Lucky-sound**: matching a pair from the first attempt - special sound.
@@ -121,39 +120,77 @@ The wireframes target as much as possible the final result of the project and I 
 - [ ] **Timer** starts on the first click of the card and not when the game mode is selected.
 - [ ] **Pause** game button that can pause the entire functionality of the game.
 - [ ] **Leaderboard** that will imply that the user enters his chosen data to be stored locally before entering the game and then accessing the database whenever pleases.
+- [ ] **Jasmine** framework to automate some testing of my **JavaScript** code and for a better (TDD) - Test Driven Development.
 
 ## Technologies used
-- This project utilizes HTML, CSS and JavaScript as main programming languages.
-- [Google Fonts]()
-- Visual Studio Code with the Live Server
-- [Github]
-- [Markdown](https://guides.github.com/features/mastering-markdown/) 
-- [Google Fonts](https://fonts.google.com) 
-- Google Chrome developer tools for test and debugging 
-- [Balsamiq](https://balsamiq.com/wireframes/) to create and edit the wireframes.
-- [Imgur](https://imgur.com/) to store all images
-- [Favicon.io](https://favicon.io/favicon-converter/)
+- This project utilizes **HTML**, **CSS**, **JavaScript** and **jQuery** as main programming languages.
+- [**jQuery**](https://jquery.com)
+    - The project uses **jQuery** to simplify DOM manipulation. This is both the standard jQuery that is built with Bootstrap components, and my custom jQuery used in my script.js file.
+- **Visual Studio Code** development environment
+    - Live Server Extension
+    - Markdown Preview Extension
+- **Github** to store project
+- **Git** for version control
+- **Github pages** to deploy project
+- [**Markdown**](https://guides.github.com/features/mastering-markdown/) for the README.md file.
+- [**Google Fonts**](https://fonts.google.com) to style the text and match the game theme.
+- **Google Chrome** developer tools for test and debugging.
+- [**Bootstrap**](https://getbootstrap.com/)
+    - The project uses the **Bootstrap** framework to add a responsive grid system, prebuilt components, plugins built on jQuery, and Bootstrap styles to my game, before adding my custom styles.
+- [**Balsamiq**](https://balsamiq.com/wireframes/) to create and edit the wireframes.
+- [**Imgur**](https://imgur.com/) to store all images.
+- [**Favicon.io**](https://favicon.io/favicon-converter/) for the icons of the app.
+
+### Version Control
+
+- [**Gitpod**](https://www.gitpod.io/)
+    - I've used **Gitpod** as a version control system to regularly add and commit changes made to project before pushing them to GitHub.
+- [**GitHub**](https://github.com/)
+    - I've used **GitHub** as a remote repository to push and store the committed changes to my project from Gitpod. I've also used GitHub pages to deploy my website/app in a live environment.
 
 ## Testing
+
+### Responsive Testing
+I have used Google Chrome's Development tools to constantly test each change that I have made to my project and to ensure that it is rendered in the desired way on different screen sizes.
+I also tested my game on different screen sizes (mobile, tablet and desktop) to ensure it is displayed in the desired way on different devices.
+
+### Manual testing
+1. Pressed on every button and check functionality on several stages.
+2. Turning all cards, clicking on all cards fast and rapidly.
+
+### Validation
 - [HTML validator](https://validator.w3.org/#validate_by_input)
 - [CSS validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 - [JsHint](https://jshint.com)
 
-### Manual testing
-1. Pressed on every button and check functionality on several stages
-2. Turning all cards, clicking on all cards fast and rapidly
-
-### Errors & Debugging
+### Bugs And Errors
 * Restart function 
 
 ## Deployment
+The project was made by creating and new repository in Github, copying [web url](https://github.com/morphy80/Memory-Game.git)
+and cloned by pasting the link in Visual Studio Code built-in Git control. Git was used for version control and pushed to a repository hosted on [Github pages](https://morphy80.github.io/Memory-Game/)
 
-### How to deploy code locally
-If you wish to run this code locally: 
+### How To Deploy Code Locally
 
-- Download or clone the code from the Github [repository](https://github.com/morphy80/Memory-Game)
-- Click on "Clone or download" to Download ZIP or clone by copying the link
-- Uncompress the ZIP folder to view or clone into VS Code using Source Control and paste the link in "Clone" window
+1. Go to my GitHub [repository](https://morphy80.github.io/Memory-Game/) 
+
+2.  Click on 'Clone or download' under the repository name.
+
+3. Copy the clone URL for the repository in the 'Clone with HTTPs section'.
+
+4. Open terminal in your local IDE.
+
+5. Change the current working directory to the location where you want the cloned directory to be made.
+
+6. Type  ```git clone``` and paste copied repository link.
+
+Or paste this into your console:
+
+```
+git clone https://github.com/morphy80/Memory-Game.git
+```
+
+7. Press Enter to complete
 
 ## Credits
 
@@ -161,11 +198,14 @@ If you wish to run this code locally:
 - Javascript [tutorial](https://www.udemy.com/course/jquery-game-course/) 
 - [StackOverflow](https://stackoverflow.com/questions/49425137/how-to-stop-timer-in-javascript) for accurate timer in seconds and minutes.
 
-### Images
-- [Imgur](https://i.imgur.com/bTu45F0.png?1) for back-side of the cards
+### Media
 
-### Audio
-* All the sounds were taken from the same audio source[Orange free sounds](http://www.orangefreesounds.com/)
+#### Images
+- [Imgur](https://i.imgur.com/bTu45F0.png?1) for back-side of the cards
+- [Imgur](https://i.imgur.com/41Q3v0A.jpg) for background
+
+#### Audio
+ All the sounds were taken from the same audio source[Orange free sounds](http://www.orangefreesounds.com/)
 - [Button click](http://www.orangefreesounds.com/switch-sound-effect/)
 - [Card flip](http://www.orangefreesounds.com/card-flip-sound-effect/)
 - [Matched-correct](http://www.orangefreesounds.com/coin-collect-sound-effect/)
