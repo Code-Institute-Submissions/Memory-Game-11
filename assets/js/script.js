@@ -249,6 +249,14 @@
     $('#infoModal').click(function() {
         $('#info').modal('show');
     });
+    
+    // winModal
+    $('#winModal').on('show.bs.modal', function(event) {
+        let moves = $(event.relatedTarget),
+            content = $('#score').html("Moves " + game.clicks),
+            modal = $(this);
+        modal.find('.modal-body').html(content);
+    });
 
     /**Reload the page when the button refresh is clicked on winModal
      * This will reload the page destroying the older cache and displaying the contents from scratch 
