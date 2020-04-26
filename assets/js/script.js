@@ -252,8 +252,10 @@
     
     // winModal
     $('#winModal').on('show.bs.modal', function(event) {
-        let moves = $(event.relatedTarget),
-            content = $('#winScore').html("You completed the game in" + " " + game.clicks + " " + "moves"),
+        let moves = $(event.relatedTarget);
+        let timerHtml = $('.timer').html();
+        let winTime = timerHtml.replace("Timer:", "")
+        content = $('#winScore').html("You finished the game in" + winTime + " with " + game.clicks + " moves."),
             modal = $(this);
         modal.find('.modal-body').html(content);
     });
