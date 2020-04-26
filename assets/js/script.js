@@ -83,7 +83,7 @@
             case "easy":
                 startGame();
                 colorCardsArray = easyArray;
-                let selectedDifficulty = "easy";
+                selectedDifficulty = "easy";
                 break;
             case "medium":
                 startGame();
