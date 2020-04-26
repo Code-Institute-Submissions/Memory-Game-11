@@ -108,6 +108,7 @@ The wireframes target as much as possible the final result of the project and I 
 * Timer counter in seconds and minutes. 
 * Moves counter as number of clicks.
 * Multiple sounds for each functionality: background music, flipping cards, matching cards, all buttons, win sound when the is game over. 
+* Modals background color.
 
 ###  Features left to implement
 
@@ -154,9 +155,36 @@ The wireframes target as much as possible the final result of the project and I 
 I have used Google Chrome's Development tools to constantly test each change that I have made to my project and to ensure that it is rendered in the desired way on different screen sizes.
 I also tested my game on different screen sizes (mobile, tablet and desktop) to ensure it is displayed in the desired way on different devices.
 
+Devices and platforms used for testing:
+* Samsung Galaxy 7 Edge:
+    - Safari
+    - Chrome
+* Samsung Galaxy S9 
+    - Chrome
+* Dell Latitude Tablet
+    - Chrome
+* Iphone X 
+    - Safari
+    - Chrome
+    - Brave     
+* Ipad Pro
+    - Firefox
+    - Chrome
+* Windows 10
+    - Chrome
+    -Firefox    
+
 ### Manual testing
 1. Pressed on every button and check functionality on several stages.
 2. Turning all cards, clicking on all cards fast and rapidly.
+3. Checking the sounds on various levels of volume.
+4. Clicking the mute button to check all the other sounds that are muted.
+5. Playing to win every difficulty levels with or without sounds to see if the Win Modal is displayed.
+6. Testing all buttons functionality and if there are no errors by clicking them.
+7. Testing if all content is visible on different screen sizes.
+8. Checking if the instructions are clear and correct.
+9. Verifying if the results are displayed accordingly in the Win Modal.
+10. Checked How to play Modal is displayed properly on all screen sizes
 
 ### Validation
 - [HTML validator](https://validator.w3.org/#validate_by_input)
@@ -164,7 +192,16 @@ I also tested my game on different screen sizes (mobile, tablet and desktop) to 
 - [JsHint](https://jshint.com)
 
 ### Bugs And Errors
-* Restart function 
+* Restart function that was not well edited - fixed.
+* Cache full affected the correct display of the cards and the right sounds - fixed with the implementation of the **refresh page button**.
+* Size of the cards to be on the right scale for all screen sizes and positon balanaced - fixed.
+* Positioning of the buttons and the scale for media queries - fixed.
+* Timer function - fixed due to [stackoverflow].
+* **Timer** and **Moves** on **Win Modal** - took me about 6 to 8 hours to fix letting it in the format that it is 
+    - 2 variables unused but the function works properly and displays the correct numbers.
+* Start button was removed due to implementation of the difficulty selector and lost its purpose - fixed.
+* **Match cards sound** edited for not overlapping with another matched pair of cards - fixed. 
+* Inconsistency of fonts in the **How to play Modal** - fixed.
 
 ## Deployment
 The project was made by creating and new repository in Github, copying [web url](https://github.com/morphy80/Memory-Game.git)
@@ -201,8 +238,8 @@ git clone https://github.com/morphy80/Memory-Game.git
 ### Media
 
 #### Images
-- [Imgur](https://i.imgur.com/bTu45F0.png?1) for back-side of the cards
-- [Imgur](https://i.imgur.com/41Q3v0A.jpg) for background
+- [Imgur](https://i.imgur.com/bTu45F0.png?1) for back-side of the cards.
+- [Imgur](https://i.imgur.com/41Q3v0A.jpg) for background image.
 
 #### Audio
  All the sounds were taken from the same audio source[Orange free sounds](http://www.orangefreesounds.com/)
